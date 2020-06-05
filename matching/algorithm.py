@@ -18,15 +18,11 @@ import math
 
 
 def get_similarity(value1, value2):
-    """
-    Evaluate the similarity of two discussion percentages for a topic.
-
-    Args:
-        value1: discussion percentage of the topic in the first profile
-        value2: discussion percentage of the topic in the second profile
+  """
+  Avalia a semelhança de duas porcentagens de discussão para um tópico do arquivo do leitor.
 
     Returns:
-        A value representing the similarity of the two percentages.
+        Um valor que representa a semelhança das duas porcentagens.
     """
     diff = abs(value1-value2)
     return math.exp(-(diff**2) / 1000) * min(value1, value2)
